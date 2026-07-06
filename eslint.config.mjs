@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "templates/**",
+    "src/components/blocks/**",
+    "src/components/react-bits/**",
   ]),
 ]);
 

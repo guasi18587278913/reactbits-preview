@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ReactBits 组件预览中心
 
-## Getting Started
+这是一个本机预览网站，用来快速浏览 CollectUI ReactBits 的组件、区块和整站模板。
 
-First, run the development server:
+## 快速启动
+
+最省事的方式：
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+reactbits-preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+启动后打开：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://127.0.0.1:3001
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+也可以双击项目里的这个文件启动：
 
-## Learn More
+```text
+start-preview.command
+```
 
-To learn more about Next.js, take a look at the following resources:
+或者进入项目目录手动启动：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd /Users/liyadong/projects/reactbits-preview
+npm run preview
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+停止预览网站：回到终端按 `Ctrl+C`。
 
-## Deploy on Vercel
+## 更新组件
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+如果只是刷新已经安装过的组件索引：
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run sync:reactbits
+npm run generate:previews
+```
+
+如果要重新安装或补齐全部组件，需要传入 ReactBits 授权 key：
+
+```bash
+REACTBITS_LICENSE_KEY=your_key npm run sync:reactbits:install
+npm run generate:previews
+```
+
+不要把真实授权 key 写进代码或提交到 GitHub。
+
+## 预览整站模板
+
+整站模板不是普通组件，它本身是一个完整 Next 应用，所以需要单独启动：
+
+```bash
+npm run template:dev -- ai-saas
+```
+
+模板端口从 `4100` 开始，例如：
+
+```text
+http://127.0.0.1:4100
+```
+
+下载下来的模板会放在 `templates/`，这个目录不会提交到 GitHub。
+
+## GitHub
+
+这个仓库建议保持私有。ReactBits Pro 组件源码在项目里，公开仓库或公开 Pages 都可能暴露付费源码。
