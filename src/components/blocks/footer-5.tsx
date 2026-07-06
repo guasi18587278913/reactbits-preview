@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Layers, Zap, Globe } from "lucide-react";
+import { publicPath } from "@/lib/public-path";
 
 export function Footer5() {
   return (
@@ -33,7 +34,7 @@ export function Footer5() {
             <div className="flex flex-col space-y-6 sm:space-y-8">
               <div className="flex items-center gap-2">
                 <img
-                  src="/mock-logos/featherdev.svg"
+                  src={publicPath("/mock-logos/featherdev.svg")}
                   alt="FeatherDev"
                   className="h-10 w-auto invert"
                 />

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { publicPath } from "@/lib/public-path";
 
 const stats = [
   {
@@ -34,7 +35,7 @@ export default function Stats5() {
             whileInView={{ filter: "blur(0px)", opacity: 0.5 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            src="/svg/world-map.svg"
+            src={publicPath("/svg/world-map.svg")}
             alt=""
             className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"
           />

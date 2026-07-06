@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { publicPath } from "@/lib/public-path";
 
 export default function Cta7() {
   return (
@@ -78,7 +79,7 @@ export default function Cta7() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="mt-14 w-full max-w-sm aspect-9/12 rounded-[3rem] bg-neutral-100 dark:bg-neutral-900 border-10 border-neutral-200 dark:border-neutral-800 mx-auto flex items-center justify-center shadow-xl"
         >
-          <img src="/svg/placeholder.svg" alt="" className="w-20 h-20 opacity-40 dark:invert" />
+          <img src={publicPath("/svg/placeholder.svg")} alt="" className="w-20 h-20 opacity-40 dark:invert" />
         </motion.div>
       </div>
     </section>

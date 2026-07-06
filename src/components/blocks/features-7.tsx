@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { publicPath } from "@/lib/public-path";
 
 const sections = [
   {
@@ -44,7 +45,7 @@ export default function Features7() {
                 }`}
               >
                 <img
-                  src="/svg/placeholder.svg"
+                  src={publicPath("/svg/placeholder.svg")}
                   alt=""
                   className="w-full h-full object-cover"
                 />

@@ -68,3 +68,13 @@ http://127.0.0.1:4100
 ## GitHub
 
 这个仓库建议保持私有。ReactBits Pro 组件源码在项目里，公开仓库或公开 Pages 都可能暴露付费源码。
+
+## 在线预览网站
+
+GitHub Pages 地址：
+
+```text
+https://guasi18587278913.github.io/reactbits-preview/
+```
+
+每次推送到 `main` 分支后，GitHub Actions 会自动重新构建并发布网站。

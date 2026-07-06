@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { publicPath } from "@/lib/public-path";
 
 export function Hero16() {
   const [isCtaHovered, setIsCtaHovered] = useState(false);
@@ -18,7 +19,7 @@ export function Hero16() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <img
-            src="/mock-logos/biosynthesis.svg"
+            src={publicPath("/mock-logos/biosynthesis.svg")}
             alt="Biosynthesis"
             className="h-7 sm:h-8 w-auto dark:invert"
           />

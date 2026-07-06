@@ -2,6 +2,7 @@
 
 import { SquarePen } from "lucide-react";
 import { Linkedin, Twitter } from "@/components/preview/brand-icons";
+import { publicPath } from "@/lib/public-path";
 
 export function Footer6() {
   return (
@@ -83,7 +84,7 @@ export function Footer6() {
 
           <div className="flex items-center gap-2 select-none">
             <img
-              src="/mock-logos/quotient.svg"
+              src={publicPath("/mock-logos/quotient.svg")}
               alt="Quotient"
               className="h-8 w-auto invert dark:invert-0"
             />

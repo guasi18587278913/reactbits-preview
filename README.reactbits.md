@@ -51,3 +51,9 @@ npm run template:dev -- ai-saas
 ## GitHub 部署说明
 
 这个项目建议只推送到私有仓库。ReactBits Pro 组件源码在项目里，公开 GitHub Pages 会暴露付费源码。
+
+当前 GitHub Pages 地址：
+
+```text
+https://guasi18587278913.github.io/reactbits-preview/
+```

@@ -8,6 +8,7 @@ import {
   useSpring,
 } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { publicPath } from "@/lib/public-path";
 
 interface MenuItem {
   label: string;
@@ -157,7 +158,7 @@ export function Navigation6() {
               aria-label="Home"
             >
               <img
-                src="/mock-logos/spherule.svg"
+                src={publicPath("/mock-logos/spherule.svg")}
                 alt="Company logo"
                 className="h-8 w-auto dark:invert"
               />

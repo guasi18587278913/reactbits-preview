@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { publicPath } from "@/lib/public-path";
 
 const steps = [
   { n: 1, label: "Create your account" },
@@ -81,7 +82,7 @@ export default function Pricing11() {
           className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[220px] lg:w-[270px] xl:w-[300px] aspect-9/19 rounded-[2.5rem] lg:rounded-[3rem] bg-neutral-200 dark:bg-neutral-800 border-8 lg:border-10 border-neutral-900 dark:border-neutral-950 overflow-hidden z-10 shadow-2xl"
         >
           <img
-            src="/svg/placeholder.svg"
+            src={publicPath("/svg/placeholder.svg")}
             alt=""
             className="w-full h-full object-cover"
           />

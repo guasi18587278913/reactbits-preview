@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import { publicPath } from "@/lib/public-path";
 
 export default function Waitlist3() {
   const [email, setEmail] = useState("");
@@ -55,7 +56,7 @@ export default function Waitlist3() {
                 {/* Image */}
                 <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800">
                   <img
-                    src="/svg/placeholder.svg"
+                    src={publicPath("/svg/placeholder.svg")}
                     alt="Waitlist preview"
                     className="w-full h-full object-cover"
                   />

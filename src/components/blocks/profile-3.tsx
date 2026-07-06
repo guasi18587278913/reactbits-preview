@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Users, FileText } from "lucide-react";
 import { useState } from "react";
+import { publicPath } from "@/lib/public-path";
 
 export default function Profile3() {
   const [isHovered, setIsHovered] = useState(false);
@@ -33,7 +34,7 @@ export default function Profile3() {
               {/* Background Image */}
               <div className="absolute inset-0">
                 <img
-                  src="/svg/placeholder.svg"
+                  src={publicPath("/svg/placeholder.svg")}
                   alt="Background"
                   className="w-full h-full object-cover"
                 />
@@ -48,7 +49,7 @@ export default function Profile3() {
               <div className="mb-4">
                 <div className="relative w-full aspect-4/5 rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800">
                   <img
-                    src="/svg/placeholder.svg"
+                    src={publicPath("/svg/placeholder.svg")}
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

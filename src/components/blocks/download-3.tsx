@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { Download } from "lucide-react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+import { publicPath } from "@/lib/public-path";
 
 const vertexShader = `
   varying vec2 vUv;
@@ -166,7 +167,7 @@ export function Download3() {
 
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <img
-              src="/mock-logos/spherule.svg"
+              src={publicPath("/mock-logos/spherule.svg")}
               alt="Spherule wordmark"
               className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto brightness-0 invert"
             />
